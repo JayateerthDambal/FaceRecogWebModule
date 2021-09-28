@@ -1,0 +1,16 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/.gitignore
+.idea/FaceRecogWebModule.iml
+.idea/dataSources.xml
+.idea/deployment.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/sqldialects.xml
+.idea/vcs.xml
+Include/
+Lib/
+Scripts/
+db.sqlite3
+pyvenv.cfg

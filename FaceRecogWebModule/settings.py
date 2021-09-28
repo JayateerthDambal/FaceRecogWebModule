@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'FaceRecognition',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'dragonforcE#1',
         'host': 'localhost',
         'PORT': '5432',
     }

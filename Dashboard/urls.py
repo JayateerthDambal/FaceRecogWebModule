@@ -6,6 +6,6 @@ urlpatterns = [
     path('', views.home_page, name='Home'),
     path('student_record', views.get_student_record, name='Record'),
     path('todays_record', views.todays_record, name='TodaysRecord'),
-    path('yesterdays_record', views.yesterdays_record, name='YesterdaysRecord'),
+    path('body_temp_trends', views.get_student_values, name='TempTrends'),
 
 ]

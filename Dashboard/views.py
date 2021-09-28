@@ -4,6 +4,23 @@ from .models import Attendance_info, StudentRecord
 from django.http import JsonResponse
 import json
 from datetime import date, timedelta
+import psycopg2
+import pandas as pd
+
+conn = psycopg2.connect(
+    host = 'localhost',
+    database = 'FaceRecognition',
+    user= 'postgres',
+    password = 'dragonforcE#1',
+    port = '5432'
+)
+
+### Connecting to database with pandas
+df = pd.read_sql('select * from attendance_info', conn)
+
+def get_student_values(request):
+    return  render(request, 'temp_charts.html')
+
 
 
 @login_required(login_url='/login')
@@ -20,12 +37,7 @@ def todays_record(request):
     return render(request, 'home.html', {'infos': info})
 
 
-def yesterdays_record(request):
-    today_date = date.today().strftime("%d-%m-%Y")
-    yesterday = (today_date - timedelta(days=1))
 
-    info = Attendance_info.objects.filter(date=yesterday).order_by('student_id')
-    return render(request, 'home.html', {'infos': info})
 
 
 @login_required(login_url='/login')
@@ -33,3 +45,5 @@ def get_student_record(request):
     records = StudentRecord.objects.order_by('student_id').values()
 
     return render(request, 'record.html', {'records': records})
+
+

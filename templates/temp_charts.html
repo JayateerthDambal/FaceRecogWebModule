@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h4>Body Temperature Trend of the Students</h4>
+
+        <div class="dropdown d-flex flex-row-reverse container-sm">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Select Student
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Jayateerth</a></li>
+        <li><a class="dropdown-item" href="#">Shreeraj</a></li>
+        <li><a class="dropdown-item" href="#">Tejas</a></li>
+        <li><a class="dropdown-item" href="/student">Rupesh</a></li>
+      </ul>
+    </div>
+{% endblock %}
